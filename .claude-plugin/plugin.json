@@ -1,0 +1,23 @@
+{
+  "name": "p3c-guard",
+  "version": "0.1.0",
+  "description": "Agent 写 Java 时，新增的阿里 Java 规约（p3c）违规落不了盘。Blocks Java writes that add Alibaba p3c violations.",
+  "userConfig": {
+    "blockPriority": {
+      "type": "string",
+      "title": "拦截级别",
+      "description": "拦截到哪一级的 p3c 违规：1 只拦最严重的，2 为默认，3 全拦（含魔法值、缺 @author 等）",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "default": "2"
+    }
+  },
+  "author": {
+    "name": "alexlifexyz"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/alexlifexyz/p3c-guard"
+}

@@ -1,0 +1,18 @@
+p3c-guard
+Copyright (c) 2026 alexlifexyz
+
+This project is not affiliated with or endorsed by Alibaba Group.
+
+p3c-guard does not contain or redistribute any rule implementation. On first
+use it downloads, from Maven Central, and runs:
+
+  io.github.loong95:p3c-pmd-jdk21:3.0.1 (Apache License 2.0)
+  https://github.com/loong95/p3c-cmd-jdk21
+  An unofficial port of Alibaba's p3c rules to PMD 7 and JDK 21.
+
+which is derived from:
+
+  alibaba/p3c (Apache License 2.0)
+  https://github.com/alibaba/p3c
+
+and built on PMD (BSD-style license), https://github.com/pmd/pmd

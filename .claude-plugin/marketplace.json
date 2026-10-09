@@ -1,0 +1,13 @@
+{
+  "name": "p3c-guard",
+  "owner": {
+    "name": "alexlifexyz"
+  },
+  "plugins": [
+    {
+      "name": "p3c-guard",
+      "source": "./"
+    }
+  ],
+  "description": "p3c-guard：Agent 写 Java 时拦住新增的阿里 Java 规约违规"
+}
