@@ -125,7 +125,10 @@ const fetchJar = async ($: Engine): Promise<string> => {
       throw new Error(`download failed: ${got.stderr.slice(0, 200)}`)
     }
 
-    const sum = await $.process.run(['shasum', '-a', '256', part])
+    // sha256sum ships with GNU coreutils; shasum comes with perl, which minimal Linux images lack.
+    const sum = await $.process.run([
+      'sh', '-c', 'sha256sum "$1" 2>/dev/null || shasum -a 256 "$1"', 'sh', part,
+    ])
 
     if (!sum.stdout.startsWith(JAR_SHA256)) {
       await $.process.run(['rm', '-f', part])
