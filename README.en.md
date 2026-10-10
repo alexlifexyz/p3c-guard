@@ -14,7 +14,7 @@ A Claude Code mod. Before `Write` or `Edit` touches a `*.java` file, it runs the
 /plugin install p3c-guard --marketplace alexlifexyz/p3c-guard
 ```
 
-Needs Claude Code 2.1.296 or newer. Older builds ship with mods turned off, so the plugin installs but does nothing (confirmed on 2.1.284; versions in between are untested): upgrade, or start with `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude`. Type `/p3c`: an answer means it is on, `Unknown command` means it is not.
+Needs Claude Code 2.1.287 or newer, where mods are on by default (per [awesome-claude-code-mods](https://github.com/karanb192/awesome-claude-code-mods); tested here on 2.1.296). Older builds ship with mods turned off, so the plugin installs but does nothing (confirmed on 2.1.284): upgrade, or start with `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude`. Type `/p3c`: an answer means it is on, `Unknown command` means it is not.
 
 Also needs JDK 21 or newer on `PATH`, and `curl`. The rule engine (13 MB, Maven Central, SHA-256 pinned) is downloaded to `~/.cache/p3c-guard/` on the first Java write; writes made while it downloads are not checked.
 

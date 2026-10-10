@@ -43,7 +43,7 @@ p3c-guard：这次写入会给 OrderService.java 新增 2 处阿里 Java 规约�
 
 需要本机有 **JDK 21 或更高版本**（`java` 在 `PATH` 里）和 `curl`。
 
-需要 **Claude Code 2.1.296 或更高版本**。旧版本里 Mod 默认关闭，装上后不会生效（在 2.1.284 上确认过；两者之间的版本未测）。要么升级，要么这样启动：
+需要 **Claude Code 2.1.287 或更高版本**，从这一版起 Mod 默认开启（据 [awesome-claude-code-mods](https://github.com/karanb192/awesome-claude-code-mods) 的说明；本项目实测 2.1.296 可用）。更旧的版本里 Mod 默认关闭，装上后不会生效（在 2.1.284 上确认过）。要么升级，要么这样启动：
 
 ```
 CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude
