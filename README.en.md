@@ -6,6 +6,8 @@ A Claude Code mod. Before `Write` or `Edit` touches a `*.java` file, it runs the
 
 [中文](README.md)
 
+![Demo: a Java write that breaks the rules is refused, then passes once fixed](docs/demo.gif)
+
 ## Install
 
 ```

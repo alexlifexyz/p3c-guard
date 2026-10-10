@@ -6,6 +6,8 @@
 
 [English](README.en.md)
 
+![演示：Agent 写入违规的 Java 被 p3c-guard 拦下，改对后通过](docs/demo.gif)
+
 ## 效果
 
 Agent 想写这样一个文件：
