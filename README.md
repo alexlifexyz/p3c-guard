@@ -88,7 +88,7 @@ CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude
 - **个别规则会漏。** 例如静态 `SimpleDateFormat` 在 lambda 里调用时查不出。
 - **只看 `Write` 和 `Edit`。** Agent 用 shell 命令改文件时不经过它。
 - **每台机器的第一次 Java 写入不检查**（规则引擎还在下载）。
-- 在 macOS、JDK 23、Claude Code 2.1.284（需开关）、2.1.293、2.1.296 上测过。Linux 没测，Windows 不支持。
+- 在 macOS、JDK 23 上测过：Claude Code 2.1.284（需开关）和 2.1.293 跑过真实会话，2.1.296 只跑过自动化测试。Linux 没测，Windows 不支持。
 - Claude Code Mods 是 2026-10-01 发布的早期接口，可能随版本变化。
 
 ## 规则从哪来
