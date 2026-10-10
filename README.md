@@ -43,6 +43,14 @@ p3c-guard：这次写入会给 OrderService.java 新增 2 处阿里 Java 规约�
 
 需要本机有 **JDK 21 或更高版本**（`java` 在 `PATH` 里）和 `curl`。
 
+需要 **Claude Code 2.1.296 或更高版本**。旧版本里 Mod 默认关闭，装上后不会生效（在 2.1.284 上确认过；两者之间的版本未测）。要么升级，要么这样启动：
+
+```
+CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude
+```
+
+输入 `/p3c`，看到「p3c-guard 已开启」就说明生效了；提示 `Unknown command` 就是没生效。
+
 第一次遇到 Java 写入时，它会在后台下载规则引擎（13 MB，来自 Maven Central，校验 SHA-256）到 `~/.cache/p3c-guard/`。下载期间的写入不检查，也不会卡住你。
 
 ## 它和「规约 Skill」「代码审查」有什么不同
@@ -80,7 +88,7 @@ p3c-guard：这次写入会给 OrderService.java 新增 2 处阿里 Java 规约�
 - **个别规则会漏。** 例如静态 `SimpleDateFormat` 在 lambda 里调用时查不出。
 - **只看 `Write` 和 `Edit`。** Agent 用 shell 命令改文件时不经过它。
 - **每台机器的第一次 Java 写入不检查**（规则引擎还在下载）。
-- 在 macOS、JDK 23、Claude Code 2.1.293 上测过。Linux 没测，Windows 不支持。
+- 在 macOS、JDK 23、Claude Code 2.1.284（需开关）、2.1.293、2.1.296 上测过。Linux 没测，Windows 不支持。
 - Claude Code Mods 是 2026-10-01 发布的早期接口，可能随版本变化。
 
 ## 规则从哪来
