@@ -31,7 +31,9 @@ Refusal messages are in Chinese, as the rules' own messages are.
 
 ## Limits
 
-Only the 57 rules p3c implements in code are checked, not the whole handbook. Only `Write` and `Edit` are guarded; a file changed through the shell is not. Tested on macOS with JDK 23 and Claude Code 2.1.293; Linux is untested and Windows is not supported.
+Only the 57 rules p3c implements in code are checked, not the whole handbook. Only `Write` and `Edit` are guarded; a file changed through the shell is not. Real sessions ran on macOS with JDK 23 and Claude Code 2.1.293, and on Ubuntu 24.04 with JDK 21 and Claude Code 2.1.296; Windows is not supported.
+
+See also [java-backend-skills](https://github.com/alexlifexyz/java-backend-skills), agent skills for Java backend work that also run in Codex and Cursor.
 
 ## Credits
 

@@ -88,7 +88,7 @@ CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude
 - **个别规则会漏。** 例如静态 `SimpleDateFormat` 在 lambda 里调用时查不出。
 - **只看 `Write` 和 `Edit`。** Agent 用 shell 命令改文件时不经过它。
 - **每台机器的第一次 Java 写入不检查**（规则引擎还在下载）。
-- 在 macOS、JDK 23 上测过：Claude Code 2.1.284（需开关）和 2.1.293 跑过真实会话，2.1.296 只跑过自动化测试。Linux 没测，Windows 不支持。
+- 在 macOS、JDK 23 上测过：Claude Code 2.1.284（需开关）和 2.1.293 跑过真实会话，2.1.296 只跑过自动化测试。在 Ubuntu 24.04、JDK 21 上用 Claude Code 2.1.296 跑过真实会话。Windows 不支持。
 - Claude Code Mods 是 2026-10-01 发布的早期接口，可能随版本变化。
 
 ## 规则从哪来
@@ -96,6 +96,10 @@ CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude
 p3c-guard 自己不包含也不分发任何规则实现。它在运行时下载并调用 [loong95/p3c-cmd-jdk21](https://github.com/loong95/p3c-cmd-jdk21)（Apache-2.0），这是把 [alibaba/p3c](https://github.com/alibaba/p3c) 的规则移植到 PMD 7 和 JDK 21 的非官方版本。官方 p3c 的规则引擎停在 PMD 6.15，解析不了 record、switch 表达式、文本块。
 
 本项目与阿里巴巴集团无关，也未获其背书。
+
+## 相关项目
+
+- [java-backend-skills](https://github.com/alexlifexyz/java-backend-skills)：中文 Java 后端 Agent Skills 合集（事务、MyBatis/SQL、Arthas 排障、接口幂等、阿里规约），Codex、Cursor 等其他工具也能用。
 
 ## 相关文章
 
